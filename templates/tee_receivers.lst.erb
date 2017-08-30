@@ -1,0 +1,5 @@
+<% unless @_tee_receivers == nil -%>
+<% @_tee_receivers.sort.each do | pool, ips | -%>
+id=<%= pool -%> ip=<%= ips %>
+<% end -%>
+<% end -%>

@@ -1,0 +1,16 @@
+! Global daemon
+daemonize: true
+syslog: daemon
+
+! Buffer sizes
+plugin_buffer_size: 10240
+plugin_pipe_size: 1024000
+
+! Netflow input plugin
+nfacctd_port: 2055
+nfacctd_disable_checks: true
+
+! Tee output plugin
+plugins: tee
+tee_receivers: <%= @_config_file_tee_receivers %>
+tee_transparent: true
