@@ -1,0 +1,11 @@
+[Unit]
+Description=netflow tee accounting daemon
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=-/etc/default/nfacctd_tee
+ExecStart=/usr/sbin/nfacctd -f ${NFACCTD_TEE_CONF} $DAEMON_OPTS
+
+[Install]
+WantedBy=multi-user.target
