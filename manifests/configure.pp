@@ -8,6 +8,9 @@ class pmacct::configure {
   $_pmacctd_nfprobe_service_file = $::pmacct::pmacctd_nfprobe_service_file
   $_backend_config_file = $::pmacct::backend_config_file
   $_backend_service_file = $::pmacct::backend_service_file
+  $_backend_globals = $::pmacct::backend_globals
+  $_backend_listener = $::pmacct::backend_listener
+  $_backend_inputs = $::pmacct::backend_inputs
   $_tee_service_file = $::pmacct::tee_service_file
   $_tee_config_file = $::pmacct::tee_config_file
   $_tee_receivers = $::pmacct::tee_receivers
